@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function submit(){
+			var form =document.getElementsByClassName("form")
+			for(i=0;i<form.length;i++)
+				{
+					console.log(form[i].value)
+				}
+		}
+	</script>
+</head>
+<body>
+	<p><input  class="form"type="text" placeholder="enter your name"></p>
+	<p><input  class="form" type="text" placeholder="enter your email"></p>
+	<p><input  class="form" type="text" placeholder="enter your age"></p>
+	<p><input  class="form" type="text" placeholder="enter your phonenumber"></p>
+	<p><input   class="form" type="text" placeholder="enter your gender"></p>
+	<p><button onclick="submit()">submit</button></p>
+
+</body>
+</html>
