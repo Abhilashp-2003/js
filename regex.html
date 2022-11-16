@@ -4,11 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style type="text/css">
+		body{
+			border:1px solid red;
+			width:30%;
+			
+		}
+	</style>
 	<script type="text/javascript">
 		function validate(){
 			var firstName=document.getElementById("firstname").value
 			var mobileNumber=document.getElementById("mobilenumber").value
 			var email=document.getElementById("email").value
+			var gender=document.getElementById("gender").value
+			var hobbies=document.getElementById("hobbies").value
 			var firstNameCheck=/^[a-zA-Z ]+$/
 			if(firstName=="" || firstname.length<3){
 				alert("please  do enter your name")
@@ -19,7 +28,7 @@
 				return false
 			}
 			var mobileNumberCheck=/^[6-9][0-9]{0,9}$/
-			if(mobileNumber==""){
+			if(mobileNumber==""||mobileNumber.length<10){
 				alert("please do enter a valid mobile number")
 				return false
 			}
@@ -36,7 +45,7 @@
 				alert("enter valid email")
 				return false
 			}
-
+			
 			return true
 		}
 
@@ -47,6 +56,18 @@
 		<p><input type="text" placeholder="enter your name " id="firstname"></p>
 		<p><input type="text" placeholder='enter your mobile number' id="mobilenumber"/></p>
 		<p><input type="email" placeholder="enter email"  id="email"/></p>
+		<div id="gender">
+		<p>gender</p>
+		<input type="radio" name="gender" value="male">male<br/>
+		<input type="radio" name="gender" value="female">female<br/>
+		<input type="radio" name="gender" value="other">other<br/>
+		</div>
+		<div id="hobbies">
+		<p>hobbies</p>
+		<input type="checkbox" name="hobbies" value="singing">singing<br/>
+		<input type="checkbox" name="hobbies" value="dancing">dancing<br/>
+		<input type="checkbox" name="hobbies" value="singing">codeing<br/>
+		</div>
 		<button>submit</button>
 	</form>
 
